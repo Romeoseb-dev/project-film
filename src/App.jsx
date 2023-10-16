@@ -1,12 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import SearchBar from './searchBar'
 import NavBar from './navBar'
 import Film from './film'
-
-
 
 function App() {
   const descri = [
@@ -112,6 +108,9 @@ function App() {
     </div>
     <div className="jaquette">
     {descri.filter(film => !filteredGenre || film.genre === filteredGenre).map((film, index) => <Film key={index} descri={film} />)}
+
+</div>
+<div>
 
 </div>
 

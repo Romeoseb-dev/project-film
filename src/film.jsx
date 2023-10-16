@@ -1,7 +1,6 @@
 import React from 'react';
 import FavoriIcon from './favori';
 
-
 const Film = ({ descri }) => {
     return (
         <div className="film-item">
@@ -11,7 +10,5 @@ const Film = ({ descri }) => {
         </div>
     );
 }
-
-
 
 export default Film
