@@ -1,17 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 
-const NavBar = ({ favoris, genre }) => {
-
+const NavBar = ({ onFilter }) => {
     return (
-    <div className="navbar">
-        <ul>
-            <li>tout</li>
-            <li>favoris</li>
-            <li>action</li>
-            <li>comedie</li>
-            <li>animation</li>
-        </ul>
-    </div>
+        <div className="navbar">
+            <ul>
+                <li onClick={() => onFilter(null)}>tout</li>
+                {/*... Other list items ...*/}
+                <li onClick={() => onFilter("action")}>action</li>
+                <li onClick={() => onFilter("comedie")}>comedie</li>
+                <li onClick={() => onFilter("animation")}>animation</li>
+                {/*... Other list items ...*/}
+            </ul>
+        </div>
     )
 }
 
