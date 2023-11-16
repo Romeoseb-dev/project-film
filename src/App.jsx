@@ -99,16 +99,14 @@ function App() {
     <div className="header-container">
       <h1>Netfilms</h1>
     </div>
-    <div className='navsearch'>
-      <div className='navbar'>
-        <NavBar onFilter={genre => setFilteredGenre(genre)} />
-      </div>
-      <div className='searchbar'>
-        <SearchBar/>
-      </div>
+    <div className='container'>
+    <NavBar className='navbar'onFilter={genre => setFilteredGenre(genre)} />
+    <div className='searchjaq'>
+        <SearchBar className='searchbar'/>
+        <div className="jaquette">
+          {descri.filter(film => !filteredGenre || film.genre === filteredGenre).map((film, index) => <Film key={index} descri={film} />)}
+        </div>
     </div>
-    <div className="jaquette">
-      {descri.filter(film => !filteredGenre || film.genre === filteredGenre).map((film, index) => <Film key={index} descri={film} />)}
     </div>
   </div>)
 }
